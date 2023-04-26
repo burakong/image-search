@@ -15,7 +15,7 @@ export class ImageSearchComponent {
 
   search() {
     this.photoSearchService.getdata(this.searchData, this.perPage).subscribe((response: any) => {
-      console.log(response);
+      console.log(response.photos);
       this.photos = response.photos;
     }, (error: Error) => {
       console.log(error);
