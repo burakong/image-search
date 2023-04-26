@@ -8,7 +8,7 @@ import { PhotoSearchService } from '../photo-search.service';
 })
 export class ImageSearchComponent {
 
-  searchData: any;
+  searchData: string = "";
   perPage: number = 6;
   photos: any = [];
   constructor(private photoSearchService: PhotoSearchService) { }
