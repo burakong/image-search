@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { PhotoSearchService } from '../photo-search.service';
 
 @Component({
   selector: 'app-image-search',
   templateUrl: './image-search.component.html',
   styleUrls: ['./image-search.component.scss']
 })
-export class ImageSearchComponent implements OnInit {
+export class ImageSearchComponent {
 
-  constructor() { }
+  searchData: any;
+  perPage: any;
+  photos: any = [];
+  constructor(private photoSearchService: PhotoSearchService) { }
 
-  ngOnInit(): void {
+  search() {
+    this.photoSearchService.getdata(this.searchData, this.perPage).subscribe((response: any) => {
+      console.log(response);
+      this.photos = response.photos;
+    }, (error: Error) => {
+      console.log(error);
+    })
   }
 
 }
