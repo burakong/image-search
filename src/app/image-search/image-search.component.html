@@ -1,5 +1,5 @@
 <div class="card-header main-search">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-12 col-md-3 col-xl-3">
             <input [(ngModel)]="searchData" class="AutoFocus form-control" placeholder="Type something..." type="text">
         </div>
@@ -7,8 +7,8 @@
             <input name="deliveryNumber" [(ngModel)]="perPage" class="AutoFocus form-control" placeholder="No of Images"
                 type="text">
         </div>
-        <div class="ml-auto">
-            <input type="button" (click)="search()" value="Search" class="btn btn-primary search-btn">
+        <div class="col-12 col-md-3 col-xl-3">
+            <input type=" button" (click)="search()" value="Search" class="btn btn-primary search-btn">
         </div>
     </div>
 </div>
