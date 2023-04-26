@@ -42,13 +42,15 @@ input {
 }
 
 h3 {
-    font-size: 13px;
+    font-size: 16px;
     color: pink;
+    text-align: center;
 }
 
 h1 {
     font-weight: bold;
     color: #BEBEBE;
+    text-align: center;
 }
 
 p {
@@ -69,4 +71,19 @@ p {
 
 .card {
     background-color: #BEBEBE;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+    }
+
+    #search-text {
+        flex: 1 0 20px;
+    }
+
+    #number-of-images {
+        flex: 1 0 20px;
+    }
 }
