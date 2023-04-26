@@ -1,0 +1,12 @@
+<div class="card-header main-search">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-3 col-xl-3">
+            <input [(ngModel)]="searchData" class="form-control" placeholder="Type something..." type="text"
+                (keyup)="search()">
+        </div>
+        <div class="col-12 col-md-2 col-xl-1">
+            <input name="deliveryNumber" [(ngModel)]="perPage" class="form-control" placeholder="No. of Images"
+                type="number" min="0">
+        </div>
+    </div>
+</div>
