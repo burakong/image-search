@@ -16,7 +16,12 @@ export class ImageDetailComponent implements OnInit {
   }
 
   setBackgroundImg() {
-    return { 'background-image': 'url(' + this.img.src.original + ')' };
+    if (this.img) {
+      return { 'background-image': 'url(' + this.img.src.original + ')' };
+    }
+    else {
+      return { 'background-color': '#BEBEBE' };
+    }
   }
 
 }
