@@ -29,6 +29,7 @@ export class ImageSearchComponent implements OnDestroy {
   }
 
   onImgDetails(img: any) {
+    this._currentImageService.setCurrentImg(img);
     this._router.navigate(['image-detail/' + img.id]);
   }
 
