@@ -6,3 +6,13 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #BEBEBE;
 }
+
+.btn {
+    background-color: #1981B8;
+    color: #BEBEBE;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
