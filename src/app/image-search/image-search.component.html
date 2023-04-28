@@ -15,7 +15,7 @@
                 <img class="card-img-top" [src]="pic.src.landscape" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-title">{{pic.alt}}</p>
-                    <a href="{{pic.url}}" class="btn" target="_blank">Know more</a>
+                    <button class="btn" (click)="onImgDetails(pic)">Details</button>
                 </div>
             </div>
         </div>

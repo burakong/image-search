@@ -5,7 +5,7 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 
 const routes: Routes = [
   { path: 'image-search', component: ImageSearchComponent },
-  { path: 'image-detail', component: ImageDetailComponent },
+  { path: 'image-detail/:id', component: ImageDetailComponent },
   { path: '', redirectTo: '/image-search', pathMatch: 'full' }, // redirect to `first-component`
 ];
 

@@ -1,6 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { PhotoSearchService } from '../photo-search.service';
 import { Subject, take, takeUntil, tap } from 'rxjs';
+import { CurrentImageService } from '../current-image.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-image-search',
@@ -13,16 +15,21 @@ export class ImageSearchComponent implements OnDestroy {
   public perPage: number = 6;
   public photos: any = [];
   private _unsubscribe$: Subject<void> = new Subject();
-  constructor(private photoSearchService: PhotoSearchService) { }
+  constructor(private _photoSearchService: PhotoSearchService,
+    private _currentImageService: CurrentImageService, private _router: Router) { }
 
   search() {
-    this.photoSearchService.getdata(this.searchData, this.perPage).pipe(take(1),
+    this._photoSearchService.getdata(this.searchData, this.perPage).pipe(take(1),
       takeUntil(this._unsubscribe$),
       tap((response: any) => {
         console.log(response.photos);
         this.photos = response.photos;
       }))
       .subscribe();
+  }
+
+  onImgDetails(img: any) {
+    this._router.navigate(['image-detail/' + img.id]);
   }
 
   ngOnDestroy() {
