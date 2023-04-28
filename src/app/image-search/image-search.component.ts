@@ -19,13 +19,15 @@ export class ImageSearchComponent implements OnDestroy {
     private _currentImageService: CurrentImageService, private _router: Router) { }
 
   search() {
-    this._photoSearchService.getdata(this.searchData, this.perPage).pipe(take(1),
-      takeUntil(this._unsubscribe$),
-      tap((response: any) => {
-        console.log(response.photos);
-        this.photos = response.photos;
-      }))
-      .subscribe();
+    if (this.searchData.length >= 1) {
+      this._photoSearchService.getdata(this.searchData, this.perPage).pipe(take(1),
+        takeUntil(this._unsubscribe$),
+        tap((response: any) => {
+          console.log(response.photos);
+          this.photos = response.photos;
+        }))
+        .subscribe();
+    }
   }
 
   onImgDetails(img: any) {
