@@ -24,7 +24,7 @@
 }
 
 table {
-    width: 80%;
+    width: 50%;
     color: white;
     z-index: 1;
     text-align: center;
@@ -32,4 +32,5 @@ table {
 
 table td {
     border: none;
+    line-height: 50px;
 }
