@@ -1,3 +1,30 @@
 <div class="detail-container" [ngStyle]="setBackgroundImg()">
-    <div class="detail-block"><b>Name: <span>TEST</span></b></div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>{{img.alt}}</td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>{{img.height}}</td>
+            </tr>
+            <tr>
+                <td>Width</td>
+                <td>{{img.width}}</td>
+            </tr>
+            <tr>
+                <td>Photographer</td>
+                <td>{{img.photographer}}</td>
+            </tr>
+            <tr>
+                <td>Photographer Profile</td>
+                <td><a href="#" class="btn">profile</a></td>
+            </tr>
+            <tr>
+                <td>Image Link</td>
+                <td><a href="#" class="btn">image</a></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
