@@ -22,11 +22,7 @@ export class ImageSearchComponent implements OnDestroy {
     if (this.searchData.length >= 1) {
       this._photoSearchService.getdata(this.searchData, this.perPage).pipe(take(1),
         takeUntil(this._unsubscribe$),
-        tap((response: any) => {
-          console.log(response.photos);
-          this.photos = response.photos;
-        }))
-        .subscribe();
+        tap((response: any) => this.photos = response.photos)).subscribe();
     }
   }
 
