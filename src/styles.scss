@@ -1,19 +1,20 @@
 @import'~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import 'app/variables';
 
 body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
-    background-color: #BEBEBE;
+    background-color: var(--gray);
 }
 
 .btn {
-    background-color: #1981B8;
+    background-color: var(--blue);
     color: white;
     transition: all 0.6s ease-in;
 }
 
 .btn:hover {
-    background-color: #1981B8;
+    background-color: var(--blue);
     opacity: 0.6;
 }

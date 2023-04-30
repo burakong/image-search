@@ -6,7 +6,7 @@
     background: url("../../assets/img/searching.jpg") no-repeat center center/cover;
     height: 100vh;
     position: relative;
-    color: #fff;
+    color: white;
 }
 
 .search-form {
@@ -49,7 +49,7 @@ h3 {
 
 h1 {
     font-weight: bold;
-    color: #BEBEBE;
+    color: var(--gray);
     text-align: center;
 }
 
@@ -65,7 +65,7 @@ p {
 }
 
 .card {
-    background-color: #BEBEBE;
+    background-color: var(--gray);
 }
 
 /* Mobile */
