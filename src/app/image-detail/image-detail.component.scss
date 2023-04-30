@@ -24,13 +24,28 @@
 }
 
 table {
-    width: 50%;
+    width: 70%;
     color: white;
     z-index: 1;
     text-align: center;
+    margin: 25px;
 }
 
 table td {
     border: none;
     line-height: 50px;
+}
+
+/* WideScreen */
+@media (min-width: 1201px) {
+    table {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
 }
