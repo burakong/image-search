@@ -9,10 +9,11 @@ body {
 
 .btn {
     background-color: #1981B8;
-    color: #BEBEBE;
-    transition: all 0.3s ease-in;
+    color: white;
+    transition: all 0.6s ease-in;
 }
 
 .btn:hover {
+    background-color: #1981B8;
     opacity: 0.6;
 }
