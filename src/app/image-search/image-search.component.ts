@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
-import { PhotoSearchService } from '../photo-search.service';
+import { PhotoSearchService } from '../services/photo-search.service';
 import { Subject, take, takeUntil, tap } from 'rxjs';
-import { CurrentImageService } from '../current-image.service';
+import { CurrentImageService } from '../services/current-image.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrentImageService } from '../current-image.service';
+import { CurrentImageService } from '../services/current-image.service';
 
 @Component({
   selector: 'app-image-detail',
