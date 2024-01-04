@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { ImageSearchComponent } from './image-search.component';
 
 describe('ImageSearchComponent', () => {
@@ -8,9 +9,10 @@ describe('ImageSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImageSearchComponent ]
+      declarations: [ImageSearchComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
