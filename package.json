@@ -1,6 +1,11 @@
 {
   "name": "image-search",
   "version": "0.0.0",
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng test"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -29,6 +34,7 @@
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "husky": "^8.0.3",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
